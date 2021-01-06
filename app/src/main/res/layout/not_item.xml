@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
     android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp">
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:orientation="vertical"
+    app:cardBackgroundColor="#7DDFEE">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -14,7 +15,7 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/text_view_priority"
+            android:id="@+id/Jumlah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -23,24 +24,36 @@
             android:textColor="@color/colorAccent"
             android:textSize="18sp" />
 
+
         <TextView
-            android:id="@+id/text_view_title"
+            android:id="@+id/Nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_toStartOf="@id/text_view_priority"
+            android:layout_toStartOf="@id/Jumlah"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="Judul"
+            android:text="Nama"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/text_view_description"
+            android:id="@+id/Waktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_title"
-            android:text="Deskripsi"/>
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:text="00.00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Nama"
+            android:text="Tanggal" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

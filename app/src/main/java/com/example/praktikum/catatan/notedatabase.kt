@@ -43,7 +43,7 @@ abstract class NoteDatabase : RoomDatabase() {
     class PopulateDbAsyncTask(db: NoteDatabase?) : AsyncTask<Unit, Unit, Unit>() {
         private val noteDao = db?.noteDao()
         override fun doInBackground(vararg p0: Unit?) {
-            noteDao?.insert(Note("Coba 1", "Deskripsi 1", 1))
+            noteDao?.insert(Note("Coba 1", "Deskripsi 1", 1, "12.00"))
         }
     }
 }

@@ -13,8 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/lightGray"
-        tools:itemCount="5"
+        tools:itemCount="6"
         tools:listitem="@layout/not_item" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/buttonAddNote"
@@ -24,8 +25,27 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:src="@drawable/ic_add_black_24dp"
-        app:backgroundTint="@color/colorPrimary" />
+        app:backgroundTint="#E91E63" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/profilButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_person_black_24dp"
+        app:backgroundTint="#E91E63" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_restaurant_menu_black_24dp"
+        app:backgroundTint="#E91E63" />
 
 
 

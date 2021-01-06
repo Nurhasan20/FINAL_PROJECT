@@ -35,6 +35,15 @@ class MainActivity : AppCompatActivity() {
                 ADD_NOTE_REQUEST
             )
         }
+        profilButton.setOnClickListener {
+               startActivity(
+                   Intent(this, diriActivity::class.java))
+        }
+        buttonMenu.setOnClickListener {
+            startActivity(
+                Intent(this, listActivity::class.java))
+        }
+
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.setHasFixedSize(true)
 
@@ -69,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra(AddEditNoteActivity.EXTRA_JUDUL, note.title)
                 intent.putExtra(AddEditNoteActivity.EXTRA_DESKRIPSI, note.description)
                 intent.putExtra(AddEditNoteActivity.EXTRA_PRIORITAS, note.priority)
+                intent.putExtra(AddEditNoteActivity.EXTRA_WAKTU, note.waktu)
                 startActivityForResult(intent, EDIT_NOTE_REQUEST)
             }
         })
@@ -99,8 +109,9 @@ class MainActivity : AppCompatActivity() {
             val newNote = Note(
                 data!!.getStringExtra(AddEditNoteActivity.EXTRA_JUDUL),
                 data.getStringExtra(AddEditNoteActivity.EXTRA_DESKRIPSI),
-                data.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITAS, 1)
-            )
+                data.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITAS, 1),
+                data.getStringExtra(AddEditNoteActivity.EXTRA_WAKTU))
+
             noteViewModel.insert(newNote)
             Toast.makeText(this, "Catatan disimpan!", Toast.LENGTH_SHORT).show()
         } else if (requestCode == EDIT_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
@@ -112,8 +123,9 @@ class MainActivity : AppCompatActivity() {
             val updateNote = Note(
                 data!!.getStringExtra(AddEditNoteActivity.EXTRA_JUDUL),
                 data.getStringExtra(AddEditNoteActivity.EXTRA_DESKRIPSI),
-                data.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITAS, 1)
-            )
+                data.getIntExtra(AddEditNoteActivity.EXTRA_PRIORITAS, 1),
+                data.getStringExtra(AddEditNoteActivity.EXTRA_WAKTU))
+
             updateNote.id = data.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1)
             noteViewModel.update(updateNote)
         } else {

@@ -17,7 +17,7 @@ class NoteAdapter : ListAdapter<Note, NoteAdapter.NoteHolder>(DIFF_CALLBACK) {
                 return oldItem.id == newItem.id
             }
             override fun areContentsTheSame(oldItem: Note, newItem: Note): Boolean {
-                return oldItem.title == newItem.title && oldItem.description == newItem.description && oldItem.priority == newItem.priority
+                return oldItem.title == newItem.title && oldItem.description == newItem.description && oldItem.priority == newItem.priority && oldItem.waktu == newItem.waktu
             }
         }
     }
@@ -32,6 +32,7 @@ class NoteAdapter : ListAdapter<Note, NoteAdapter.NoteHolder>(DIFF_CALLBACK) {
         holder.textViewTitle.text = currentNote.title
         holder.textViewPriority.text = currentNote.priority.toString()
         holder.textViewDescription.text = currentNote.description
+        holder.textViewWaktu.text = currentNote.waktu
     }
     fun getNoteAt(position: Int): Note {
         return getItem(position)
@@ -45,9 +46,10 @@ class NoteAdapter : ListAdapter<Note, NoteAdapter.NoteHolder>(DIFF_CALLBACK) {
                 }
             }
         }
-        var textViewTitle: TextView = itemView.text_view_title
-        var textViewPriority: TextView = itemView.text_view_priority
-        var textViewDescription: TextView = itemView.text_view_description
+        var textViewTitle: TextView = itemView.Nama
+        var textViewPriority: TextView = itemView.Jumlah
+        var textViewDescription: TextView = itemView.Tanggal
+        var textViewWaktu: TextView = itemView.Waktu
     }
     interface OnItemClickListener {
         fun onItemClick(note: Note)
