@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 noteViewModel.delete(adapter.getNoteAt(viewHolder.adapterPosition))
-                Toast.makeText(baseContext, "Catatan dihapus!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "Reservasi Selesi, Reservasi Dihapus", Toast.LENGTH_SHORT).show()
             }
         }
         ).attachToRecyclerView(recycler_view)
@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
                 data.getStringExtra(AddEditNoteActivity.EXTRA_WAKTU))
 
             noteViewModel.insert(newNote)
-            Toast.makeText(this, "Catatan disimpan!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Resrvasi Berhasil", Toast.LENGTH_SHORT).show()
         } else if (requestCode == EDIT_NOTE_REQUEST && resultCode == Activity.RESULT_OK) {
 
             val id = data?.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1)
@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity() {
             updateNote.id = data.getIntExtra(AddEditNoteActivity.EXTRA_ID, -1)
             noteViewModel.update(updateNote)
         } else {
-            Toast.makeText(this, "Catatan tidak disimpan!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Reservsi Tidak Disimpan", Toast.LENGTH_SHORT).show()
         }
     }
 }

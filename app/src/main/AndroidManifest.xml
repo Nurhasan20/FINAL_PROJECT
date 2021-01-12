@@ -9,17 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listActivity"></activity>
-        <activity android:name=".diriActivity" />
+
         <activity
-            android:name=".MainActivity"
-            android:launchMode="singleTop">
+            android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".listActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".diriActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AddEditNoteActivity"
+            android:parentActivityName=".MainActivity"/>
+
     </application>
 
 </manifest>

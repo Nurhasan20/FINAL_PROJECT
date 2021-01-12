@@ -8,15 +8,11 @@ import kotlinx.android.synthetic.main.activity_list.*
 class listActivity : AppCompatActivity() {
 
     val list = ArrayList<menu> ()
-    val ListUsers = arrayOf (menu(name = "Alpha"),"Bravo",
-        "Charlie",
-        "Delta",
-        "Echo",
-        "Foxtror",
-        "Golf",
-        "Hotel",
-        "India",
-        "Juliet"
+    val ListUsers = arrayOf (
+        "Tahu Gejrot", "Corndog", "Tahu Crispy", "Takoyaki", "Chiken Pokpok",
+        "Seblakr", "Hottang", "Roti Bakar", "Sosis Bakar", "Roti RedVelvet",
+        "GreenTea","Cappucino","Mango Frape","Avocado Frape","Juice",
+        "Latte","Choco Frape", "Redvelvet", "Oreo Chips","Bubble Gum"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

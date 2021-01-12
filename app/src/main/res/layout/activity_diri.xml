@@ -9,14 +9,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="139dp"
-        android:layout_height="139dp"
+        android:layout_width="173dp"
+        android:layout_height="169dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.104"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintVertical_bias="0.087"
+        app:srcCompat="@drawable/pilihan" />
 
     <TextView
         android:id="@+id/tvNama"
@@ -63,7 +63,47 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598"
-        tools:layout_editor_absoluteX="5dp" />
+        app:layout_constraintVertical_bias="0.591" />
+
+    <TextView
+        android:id="@+id/prodi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prodi / Jurusan :"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678" />
+
+    <TextView
+        android:id="@+id/tvisiprodi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sistem Informasi (A)"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
+
+    <TextView
+        android:id="@+id/UPN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='UPN "VETERAN" JAWA TIMUR 2020'
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvisiprodi"
+        app:layout_constraintVertical_bias="0.841" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

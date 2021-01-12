@@ -1,3 +1,3 @@
 package com.example.praktikum
 
-data class menu (val name:String)
+data class menu (val name:String?)
